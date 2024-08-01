@@ -15,6 +15,7 @@ services:
       disable: true
     environment:
       - NODE_ENV=development
+      - VITE_APP_WS_SERVER_URL=https://oss-collab.heshe.tech
     volumes:
       - ./:/opt/node_app/app:delegated
       - ./package.json:/opt/node_app/package.json

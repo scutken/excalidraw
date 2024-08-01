@@ -8,7 +8,9 @@ COPY . .
 # Error: Cannot find module @rollup/rollup-linux-x64-gnu
 RUN yarn --network-timeout 600000
 
-ARG NODE_ENV=production
+# 设置环境变量
+ARG NODE_ENV
+ENV NODE_ENV=${NODE_ENV}
 
 RUN yarn build:app:docker
 

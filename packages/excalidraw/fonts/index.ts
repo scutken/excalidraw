@@ -19,7 +19,7 @@ import { ExcalidrawFont, type Font } from "./ExcalidrawFont";
 import { getContainerElement } from "../element/textElement";
 
 import Virgil from "./assets/Virgil-Regular.woff2";
-import Excalifont from "./assets/Excalifont-Regular.woff2";
+import Excalifont from "./assets/Excali-MuYaoSuiXin.woff2";
 import Cascadia from "./assets/CascadiaCode-Regular.woff2";
 import ComicShanns from "./assets/ComicShanns-Regular.woff2";
 import LiberationSans from "./assets/LiberationSans-Regular.woff2";
