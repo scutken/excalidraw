@@ -1,26 +1,30 @@
 version: "3.8"
-
+name: excalidraw-all
 services:
   excalidraw:
     build:
       context: .
       args:
         - NODE_ENV=development
+    image: xieken/excalidraw:0.0.2
     container_name: excalidraw
     ports:
       - "23000:80"
-    restart: on-failure
+    restart: unless-stopped
     stdin_open: true
     healthcheck:
       disable: true
     environment:
       - NODE_ENV=development
-      - VITE_APP_WS_SERVER_URL=https://oss-collab.heshe.tech
     volumes:
       - ./:/opt/node_app/app:delegated
       - ./package.json:/opt/node_app/package.json
       - ./yarn.lock:/opt/node_app/yarn.lock
       - notused:/opt/node_app/app/node_modules
-
+  excalidraw-room:
+    image: xieken/excalidraw-room:0.0.1
+    ports:
+      - "23001:80"
+    restart: unless-stopped
 volumes:
   notused:

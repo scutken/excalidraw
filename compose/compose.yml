@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+
+  excalidraw:
+    image: xieken/excalidraw
+    ports:
+      - "33000:80"  # 根据需要调整端口
+    restart: always
+
+  excalidraw-room:
+    image: xieken/excalidraw-room
+    ports:
+      - "33001:80"  # 根据需要调整端口
+    restart: always
+
+  excalidraw-store:
+    image: xieken/excalidraw-store
+    ports:
+      - "33002:80"  # 根据需要调整端口
+    restart: always
